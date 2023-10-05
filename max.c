@@ -17,7 +17,7 @@ int max(int *numbers, int size) {
 
     }
     
-  return -1;
+  return maxValue;
 }
 
 #ifndef TEST
