@@ -20,15 +20,18 @@ void add(node *head, int x) {
 }
 
 // exersice 3.b
+//function that returns number of elements in in the list
 int size(node *l) {
 
-  int nodesize = 0;
-
+  int nodesize = 0; // Tæller variabel
+  
+  // Vurderer postcondition:
   assert(l != NULL);
   
   node *p = l;
+  //while loop stops when p->next = null
   while (p->next != NULL) {
-    nodesize++;
+    nodesize++; // Tæller en op for hver nyt element med data != NULL
     p = p->next;
   } // p points to the last element
   
@@ -46,7 +49,7 @@ void printout(node *l) {
   node *p = l->next;
   while (p != NULL) {
     printf("%d, ", p->data);
-    p = p->next;
+    p = p->next; // Mangler denne stykke kode for at komme videre til næste element.
   }
   printf("\n");
 }
@@ -62,7 +65,8 @@ int largest(node *l) {
   node *p = l->next;
 
   int maxValue = 0;
-
+  //while loop leder efter p->next og stopper når den er = NULL
+  //den returnerer maxValue, der er lig den p->data, der har den største værdi
   while (p->next != NULL) {
 
     if (maxValue < p->data)
