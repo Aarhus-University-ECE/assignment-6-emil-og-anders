@@ -5,17 +5,17 @@
 int max(int *numbers, int size) {
   // Excercise 2
   // Implement your code below...
-    assert(size > 0);
+  assert(size > 0);
 
-    int maxValue = numbers[0];
-    
-    for(int i = 0; i < size; i++){
+  int maxValue = numbers[0];
+  
+  for(int i = 0; i < size; i++){
 
-      if(maxValue < numbers[i]) {
-        maxValue = numbers[i];
-      }
-
+    if(maxValue < numbers[i]) {
+      maxValue = numbers[i];
     }
+
+  }
     
   return maxValue;
 }
@@ -23,6 +23,11 @@ int max(int *numbers, int size) {
 #ifndef TEST
 
 int main() {
+  int numbers[] = {5, 10, 20, 6, 10, -1, 9};
+  printf("%d", max(numbers, 7));
+
+  int numbers[] = {5, 1, 4};
+  REQUIRE(max(numbers, 3) == 5);
 
 	return 0;
 }
