@@ -23,11 +23,14 @@ int max(int *numbers, int size) {
 #ifndef TEST
 
 int main() {
-  int numbers[] = {5, 10, 20, 6, 10, -1, 9};
-  printf("%d", max(numbers, 7));
+  // int numbers[] = {5, 10, 20, 6, 10, -1, 9};
+  // printf("%d", max(numbers, 7));
 
-  int numbers[] = {5, 1, 4};
-  REQUIRE(max(numbers, 3) == 5);
+  // int numbers[] = {5, 1, 4};
+  // printf("%d", max(numbers, 3));
+
+  // int numbers[] = {-2};
+  // printf("%d", max(numbers, 1));
 
 	return 0;
 }
